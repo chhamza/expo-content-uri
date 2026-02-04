@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoContentUriModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.contenturi.ExpoContentUriModule"]
+  }
+}
