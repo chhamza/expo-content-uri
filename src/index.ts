@@ -1,5 +1,8 @@
-// Reexport the native module. On web, it will be resolved to ExpoContentUriModule.web.ts
-// and on native platforms to ExpoContentUriModule.ts
-export { default } from './ExpoContentUriModule';
-export { default as ExpoContentUriView } from './ExpoContentUriView';
-export * from  './ExpoContentUri.types';
+import { Platform } from "react-native";
+
+if (Platform.OS !== "android") {
+  throw new Error("expo-content-uri is Android-only (content:// URIs are Android-specific).");
+}
+
+export { default } from "./ExpoContentUriModule";
+export * from "./ExpoContentUri.types";

@@ -1,19 +1,10 @@
-import type { StyleProp, ViewStyle } from 'react-native';
-
-export type OnLoadEventPayload = {
-  url: string;
+export type CopyToAppStorageOptions = {
+  subdir?: string;   // default "imports"
+  fileName?: string; // optional override name
 };
 
-export type ExpoContentUriModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
-};
-
-export type ChangeEventPayload = {
-  value: string;
-};
-
-export type ExpoContentUriViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
+export type CopyToAppStorageResult = {
+  filePath: string; // absolute path in app storage
+  fileName: string; // written name (deduped)
+  size: number;     // bytes written
 };

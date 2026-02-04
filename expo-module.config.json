@@ -1,8 +1,5 @@
 {
-  "platforms": ["apple", "android", "web"],
-  "apple": {
-    "modules": ["ExpoContentUriModule"]
-  },
+  "platforms": ["android"],
   "android": {
     "modules": ["expo.modules.contenturi.ExpoContentUriModule"]
   }

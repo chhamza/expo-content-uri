@@ -1,12 +1,8 @@
-import { NativeModule, requireNativeModule } from 'expo';
+import { requireNativeModule } from "expo-modules-core";
+import type { CopyToAppStorageOptions, CopyToAppStorageResult } from "./ExpoContentUri.types";
 
-import { ExpoContentUriModuleEvents } from './ExpoContentUri.types';
+type ExpoContentUriNativeModule = {
+  copyToAppStorage(uri: string, options?: CopyToAppStorageOptions): Promise<CopyToAppStorageResult>;
+};
 
-declare class ExpoContentUriModule extends NativeModule<ExpoContentUriModuleEvents> {
-  PI: number;
-  hello(): string;
-  setValueAsync(value: string): Promise<void>;
-}
-
-// This call loads the native module object from the JSI.
-export default requireNativeModule<ExpoContentUriModule>('ExpoContentUri');
+export default requireNativeModule<ExpoContentUriNativeModule>("ExpoContentUri");
