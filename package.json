@@ -24,7 +24,6 @@
     "document-picker",
     "uri"
   ],
-  "os": ["android"],
   "files": [
     "android",
     "build",
