@@ -20,3 +20,13 @@ Because this is a native module:
 
 ```bash
 npx expo install expo-content-uri
+
+
+
+## Usage
+
+```ts
+import { ExpoContentUri } from "expo-content-uri";
+
+const result = await ExpoContentUri.copyToAppStorage(contentUri);
+console.log(result.filePath);
