@@ -1,6 +1,6 @@
 {
   "name": "expo-content-uri",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Expo native module for safely copying Android content:// URIs into app-accessible storage.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
